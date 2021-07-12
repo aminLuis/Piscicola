@@ -1,0 +1,50 @@
+<?php
+require('../../models/m_usuario/m_sesion.php');
+require('../../config/connect.php');
+
+if(isset($_POST['lago']) && $_POST['lago']!="" &&
+   isset($_POST['siembra']) && $_POST['siembra']!="" &&
+   isset($_POST['oxigeno']) && $_POST['oxigeno']!="" &&
+   isset($_POST['temperatura']) && $_POST['temperatura']!="" &&
+   isset($_POST['fecha']) && $_POST['fecha']!=""
+){
+
+$lago = $_POST['lago'];
+$siembra = $_POST['siembra'];
+$oxigeno = $_POST['oxigeno'];
+$temperatura = $_POST['temperatura'];
+$fecha = $_POST['fecha'];
+
+$lago = mysqli_real_escape_string($con,$lago);
+$siembra = mysqli_real_escape_string($con,$siembra);
+$oxigeno = mysqli_real_escape_string($con,$oxigeno);
+$temperatura = mysqli_real_escape_string($con,$temperatura);
+$fecha = mysqli_real_escape_string($con,$fecha);
+
+$sql = "INSERT INTO oxigenacion(
+  lago,
+  siembra,
+  oxigeno,
+  temperatura,
+  fecha
+) VALUES(
+  '$lago',
+  '$siembra',
+  '$oxigeno',
+  '$temperatura',
+  '$fecha'
+)";
+
+ $query = mysqli_query($con,$sql);
+
+ if(mysqli_error($con)!=null){
+     echo mysqli_error($con);
+ }else{
+     header('LOCATION: ../../views/v_oxigenacion/v_guardar.php');
+ }
+
+}else{
+    echo 'Hay campos vacios o no definidos';
+}
+
+?>

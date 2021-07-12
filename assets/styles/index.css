@@ -1,0 +1,30 @@
+.log{
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.imagen{
+    margin-top: 20px;
+    margin-left: 170px;
+}
+
+.btn-primary{
+margin-top: 60px;
+margin-left: 130px;
+}
+
+h6{
+    text-align: center;
+    margin-top: 10px;
+}
+h3{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-style: italic;
+}

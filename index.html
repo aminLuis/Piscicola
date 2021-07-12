@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="Stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="assets/styles/index.css">
+
+    <title>Login</title>
+</head>
+<body background="assets/img/lago1.jpg">
+
+ <h3>Rico pez</h3>
+
+    <div class="log">
+       
+        <image src="assets/img/avatar 64px.png" class="imagen">
+
+            <h6>Inicio de sesión</h6>
+
+        <div class="container">
+
+            <form method="POST" action="models/m_usuario/m_iniciarSesion.php">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Usuario</label>
+                  <input type="text" class="form-control"  aria-describedby="emailHelp" name="user" required>
+               </div>
+          
+               <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" name="password" required>
+                </div>
+           
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+              </form>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

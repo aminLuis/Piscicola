@@ -1,0 +1,50 @@
+.container{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 130px;
+}
+
+.card{
+    width: 1170px;
+    margin-top: 90px;
+}
+
+.container form{
+    margin-bottom: 25px;
+}
+
+.textarea{
+    margin-top: 30px;
+    width: 340px;
+    height: 90px;
+    font-style: italic;
+}
+
+body{
+    background-color: beige;
+}
+
+.edit{
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.edit h5{
+    font-style: italic;
+    margin-top: 30px;
+    margin-left: 45px;
+}
+
+.btn-cancel{
+   width: 145px;
+}
+
+.btn-info{
+    margin-top: 50px;
+}
+
