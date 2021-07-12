@@ -167,17 +167,27 @@ require('../../controllers/c_empresa/c_listar.php');
 
           <div class="row">
             
-          <div class="col" style="margin-left:14px">
-                <div class="card text-center" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Oxigenación</h5>
-                      <p class="card-text">Medición</p>
-                      <p class="card-text">Oxigeno por lago</p>
-                      <a href="../v_oxigenacion/v_guardar.php" class="btn btn-primary">Acceder</a>
+                    <div class="col" style="margin-left:14px">
+                          <div class="card text-center" style="width: 18rem;">
+                              <div class="card-body">
+                                  <h5 class="card-title">Oxigenación</h5>
+                                  <p class="card-text">Medición</p>
+                                  <p class="card-text">Oxigeno por lago</p>
+                                  <a href="../v_oxigenacion/v_guardar.php" class="btn btn-primary">Acceder</a>
+                              </div>
+                          </div>
                     </div>
-                 </div>
-          </div>
 
+                    <div class="col" style="margin-left:14px">
+                       <div class="card text-center" style="width: 18rem; margin-left:-128px">
+                         <div class="card-body">
+                            <h5 class="card-title">General</h5>
+                            <p class="card-text">Reportes</p>
+                            <p class="card-text">Detalles siembras</p>
+                            <a href="../v_reportes/v_inicio.php" class="btn btn-primary">Acceder</a>
+                         </div>
+                       </div>
+                    </div>
 
           </div>
       
