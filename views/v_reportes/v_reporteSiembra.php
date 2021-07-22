@@ -1,5 +1,7 @@
 <?php
 require('../../models/m_usuario/m_sesion.php');
+$siembra = $_POST['siembra'];
+require('../../controllers/c_reportes/c_reporteSiembra.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +15,12 @@ require('../../models/m_usuario/m_sesion.php');
     <link rel="Stylesheet" href="../../assets/styles/admin.css">
     <link rel="Stylesheet" href="../../assets/styles/alevinaje.css">
 
-    <title>Reportes</title>
+    <title>Reporte siembra</title>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" >
        
-        Reportes
+        Reporte-siembra
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -59,46 +61,27 @@ require('../../models/m_usuario/m_sesion.php');
         </form>
         </div>
       </nav>
-  
+
 
 </head>
 <body>
     
-     <div class="container" style="margin-top:50px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h5> <?php echo $mensaje ?> </h5>
+     <?php 
+     foreach($lagos as $rowLago){
+       
+     ?>
+     <h4> <?php echo $rowLago ?> </h4>
+
+     <?php
+     }
+     ?>
+
      
-        <div class="container">
-         
-            <div class="row">
-            
-                <div class="col">
-                  
-                     <a href="./v_SeleccionSiembra.php" class="text-primary stretched-link">
-
-                        <div class="alert alert-success">
-                        <h5>Reporte siembra</h5>
-                        </div>
-                  
-                     </a>
-
-                </div>
-
-                <div class="col">
-                
-                    <div class="alert alert-success">
-                        <h5>Reporte lago</h5>
-                    </div>
- 
-                </div>
-            
-            </div>
-
-        </div>
-
-     </div>
-
-
-<script src="../../assets/jquery/jquery-3.5.1.min.js"></script>
-<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

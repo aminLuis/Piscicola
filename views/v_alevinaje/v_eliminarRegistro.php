@@ -1,6 +1,6 @@
 <?php
 require('../../models/m_usuario/m_sesion.php');
-$codigo = $_GET['codigo'];
+$codigoInterno = $_GET['codigoInterno'];
 require('../../controllers/c_alevinaje/c_cargarSoloRegistro.php');
 ?>
 
@@ -90,7 +90,7 @@ require('../../controllers/c_alevinaje/c_cargarSoloRegistro.php');
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="history.go(-1)">Cancelar</button>
       
-        <a href="../../models/m_alevinaje/m_eliminarRegistro.php?codigo=<?php echo $row['codigo'] ?>">
+        <a href="../../models/m_alevinaje/m_eliminarRegistro.php?codigoInterno=<?php echo $row['codigoInterno'] ?>">
           <button type="button" class="btn btn-success">Continuar</button>
         </a>
       

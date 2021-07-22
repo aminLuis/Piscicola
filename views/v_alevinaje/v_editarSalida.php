@@ -153,7 +153,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                                <th>Lago alevinaje</th>
                                <th>Siembra</th>
                                <th>Lago de engorde</th>
-                               <th>Cantida hacia engorde</th>
+                               <th>Cantidad hacia engorde</th>
                                <th>Acción</th>
                              </tr>
                         </thead>
@@ -169,7 +169,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                                <td> <?php echo $rwReg['cantidad'] ?> </td>
                                <td>
 
-                                 <a href="./v_editarRegistro.php?codigo=<?php echo $rwReg['codigo'] ?>">
+                                 <a href="./v_editarRegistro.php?codigoInterno=<?php echo $rwReg['codigoInterno'] ?>">
                                        <button class="btn btn-warning">
                                           <i class="far fa-edit"></i>  
                                        </button>

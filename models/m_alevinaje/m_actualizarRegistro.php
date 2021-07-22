@@ -6,13 +6,14 @@ $cantidad = $_POST['cantidad'];
 $siembra = $_POST['siembra'];
 $lagoAlevinaje = $_POST['lago'];
 $lagoEngorde = $_POST['lagoEngorde'];
+$codigoInterno = $_GET['codigoInterno'];
 
 $sqlAlevinaje = "SELECT *FROM alevinaje WHERE lago='".$lagoAlevinaje."' AND siembra='".$siembra."'";
 $queryAlevinaje = mysqli_query($con,$sqlAlevinaje);
 
 foreach($queryAlevinaje as $rowAlevinaje){}
 
-$sqlRegistro = "SELECT *FROM registroSalida WHERE codigo='".$rowAlevinaje['codigo']."'";
+$sqlRegistro = "SELECT *FROM registroSalida WHERE codigoInterno='".$codigoInterno."'";
 $queryRegistro = mysqli_query($con,$sqlRegistro);
 
 foreach($queryRegistro as $rowRegistro){}
@@ -47,7 +48,7 @@ if($saldoInicial<$cantidad){
   $queyUpdateAlevinaje = mysqli_query($con,$sqlUpdateAlevinaje);
 
   //Se actualiza la cantidad en la tabla de registros de salidas
-  $sqlUpdateRegistro = "UPDATE registroSalida SET cantidad='".$cantidad."' WHERE codigo='".$rowAlevinaje['codigo']."'";
+  $sqlUpdateRegistro = "UPDATE registroSalida SET cantidad='".$cantidad."' WHERE codigoInterno='".$codigoInterno."'";
   $queryUpdateRegistro = mysqli_query($con,$sqlUpdateRegistro);
 
 

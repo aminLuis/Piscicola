@@ -1,6 +1,6 @@
 <?php
 require('../../models/m_usuario/m_sesion.php');
-$codigo = $_GET['codigo'];
+$codigoInterno = $_GET['codigoInterno'];
 require('../../controllers/c_alevinaje/c_cargarRegistro.php');
 ?>
 
@@ -24,7 +24,7 @@ require('../../controllers/c_alevinaje/c_cargarRegistro.php');
          <div class="container">
             <h5>Datos actuales</h5>
           <br>
-         <form method="POST" action="../../models/m_alevinaje/m_actualizarRegistro.php">
+         <form method="POST" action="../../models/m_alevinaje/m_actualizarRegistro.php?codigoInterno=<?php echo $row['codigoInterno'] ?>">
                
                 <div class="row">
                 

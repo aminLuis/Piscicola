@@ -116,18 +116,9 @@ $saldo = $_GET['saldo'];
 
                          <div class="col">
                                       <label>Siembra</label>
-                                      <select name="siembra"  class="form-control" required>
-                                         <option></option>
-                                         <?php
-                                         foreach($siembras as $siemb){
-                                           
-                                         ?>
-                                              <option> <?php echo $siemb ?> </option>
-                                          <?php
-                                           
-                                         }
-                                          ?>
-
+                                      <select name="siembra"  class="form-control" readonly>
+                                         <option><?php echo $siembra ?></option>
+                                        
                                       </select>
                          </div>
 

@@ -166,7 +166,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                                 if($varSesion['tipo']=='admin' || $varSesion['tipo']=='root'){
                              ?>
 
-                                 <a href="./v_eliminarRegistro.php?codigo=<?php echo $rwReg['codigo'] ?>">
+                                 <a href="./v_eliminarRegistro.php?codigoInterno=<?php echo $rwReg['codigoInterno'] ?>">
                                        <button class="btn btn-danger">
                                        <i class="far fa-trash-alt"></i>
                                        </button>

@@ -178,6 +178,7 @@ require('../../controllers/c_empresa/c_listar.php');
                           </div>
                     </div>
 
+                    <!--
                     <div class="col" style="margin-left:14px">
                        <div class="card text-center" style="width: 18rem; margin-left:-128px">
                          <div class="card-body">
@@ -188,6 +189,7 @@ require('../../controllers/c_empresa/c_listar.php');
                          </div>
                        </div>
                     </div>
+                    !-->
 
           </div>
       

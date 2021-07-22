@@ -80,11 +80,11 @@ require('../../controllers/c_alevinaje/c_listarSalidas.php');
                           <th>Código</th>
                           <th>Cantidad</th>
                           <th>Siembra</th>
-                          <th>Descripción</th>
                           <th>Lago</th>
                           <th>Animal</th>
                           <th>Peso promedio</th>
                           <th>Fecha</th>
+                          <th>Descripción</th>
                           <th>Acción</th>
                       </tr>
                  </thead>
@@ -97,11 +97,11 @@ require('../../controllers/c_alevinaje/c_listarSalidas.php');
                          <td> <?php echo $row['codigo'] ?> </td>
                          <td> <?php echo $row['cantidad'] ?> </td>
                          <td> <?php echo $row['siembra'] ?> </td>
-                         <td> <?php echo $row['descripcion'] ?> </td>
                          <td> <?php echo $row['lago'] ?> </td>
                          <td> <?php echo $row['animal'] ?> </td>
                          <td> <?php echo $row['promedioPeso'] ?> </td>
                          <td> <?php echo $row['fecha'] ?> </td>
+                         <td> <a href="./v_verDescripcion.php?codigo=<?php echo $row['codigo'] ?>">Ver descripción</a> </td>
                          <td>
                             
                               <a href="./v_editarSalida.php?codigo=<?php echo $row['codigo'] ?>">

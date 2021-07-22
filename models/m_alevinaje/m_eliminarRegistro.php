@@ -2,13 +2,15 @@
 require('../../models/m_usuario/m_sesion.php');
 require('../../config/connect.php');
 
-$codigoRegistroSalida = $_GET['codigo'];
-$codigoRegistroSalida = mysqli_real_escape_string($con,$codigoRegistroSalida);
+$codigoInterno = $_GET['codigoInterno'];
+$codigoInterno = mysqli_real_escape_string($con,$codigoInterno);
 
-$sqlRegistroSalida = "SELECT *FROM registroSalida WHERE codigo='".$codigoRegistroSalida."'";
+$sqlRegistroSalida = "SELECT *FROM registroSalida WHERE codigoInterno='".$codigoInterno."'";
 $queryRegistroSalida = mysqli_query($con,$sqlRegistroSalida);
 
 foreach($queryRegistroSalida as $rowRegistroSalida){}
+
+$codigoRegistroSalida = $rowRegistroSalida['codigo'];
 
 $sqlAlevinaje = "SELECT *FROM alevinaje WHERE codigo = '".$codigoRegistroSalida."'";
 $queryAlevinaje = mysqli_query($con,$sqlAlevinaje);
@@ -30,7 +32,7 @@ $queryUpdateAlevinaje = mysqli_query($con,$sqlUpdateAlevinaje);
 $sqlUpdateSalida = "UPDATE salida SET cantidad='".$restaCantidadSalida."', saldo='".$restaSaldoSalida."' WHERE codigo='".$rowSalida['codigo']."'";
 $queryUpdateSalida = mysqli_query($con,$sqlUpdateSalida);
 
-$sqlEliminarResgistro = "DELETE FROM registroSalida WHERE codigo='".$codigoRegistroSalida."'";
+$sqlEliminarResgistro = "DELETE FROM registroSalida WHERE codigoInterno='".$codigoInterno."'";
 $queryEliminarRegistro = mysqli_query($con,$sqlEliminarResgistro);
 
 $sqlValidar = "SELECT *FROM salida WHERE codigo='".$rowSalida['codigo']."'";

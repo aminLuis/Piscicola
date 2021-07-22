@@ -84,10 +84,6 @@ $qrValidar = mysqli_query($con,$validar);
 
 foreach($qrValidar as $rwValidar){}
 
-$cod = $rwValidar['codigo'];
-$la = $rwValidar['lago'];
-$si = $rwValidar['siembra'];
-$fech = $rwValidar[''];
 
 $sqlRegistroSalida = "INSERT INTO registroSalida(
     codigo,
@@ -95,6 +91,7 @@ $sqlRegistroSalida = "INSERT INTO registroSalida(
     siembra,
     lagoEngorde,
     cantidad,
+    descripcion,
     fecha
 )
 VALUES(
@@ -103,6 +100,7 @@ VALUES(
    '".$rwValidar['siembra']."',
    '$lago',
    '$cantidad',
+   '$descripcion',
    '".$rwValidar['fecha']."' 
 )";
 
