@@ -92,6 +92,7 @@ $sqlRegistroSalida = "INSERT INTO registroSalida(
     lagoEngorde,
     cantidad,
     descripcion,
+    animal,
     fecha
 )
 VALUES(
@@ -101,6 +102,7 @@ VALUES(
    '$lago',
    '$cantidad',
    '$descripcion',
+   '$animal',
    '".$rwValidar['fecha']."' 
 )";
 
@@ -114,7 +116,7 @@ foreach($querySalida as $rw){}
 
 
 
-if($rw['codigo']!=null){
+if($rw['codigo']!=null && $rw['animal']==$animal){
 
 
      //echo 'El lago que quiere usar ya está ocupado en ésta siembra';
@@ -125,7 +127,6 @@ if($rw['codigo']!=null){
             echo 'La cantida a sacar del lago es mayor a la disponible';
          }else{
             
-
                 $nuevaCantidad = $rw['cantidad'] + $cantidad;
                 $nuevoSaldo = $rw['saldo'] + $cantidad;
 
@@ -140,6 +141,8 @@ if($rw['codigo']!=null){
                 $queryAlevinaje = mysqli_query($con,$sqlAlevinaje);
 
                 header('LOCATION: ../../views/v_alevinaje/v_guardar.php');
+              
+               
          }
 
 
@@ -156,7 +159,8 @@ if($rw['codigo']!=null){
       }else{
 
 
-            $query = mysqli_query($con,$sql);
+
+                $query = mysqli_query($con,$sql);
 
                 if(mysqli_error($con)!=null){
                     echo mysqli_error($con);

@@ -9,6 +9,7 @@ if(isset($_POST['lago']) && $_POST['lago']!="" &&
   isset($_POST['promedio']) && $_POST['promedio']!="" &&
   isset($_POST['numero']) && $_POST['numero']!="" &&
   isset($_POST['precio']) && $_POST['precio']!= "" &&
+  isset($_POST['animal']) && $_POST['animal']!= "" &&
   isset($_POST['fecha']) && $_POST['fecha']!=""
 ){
 
@@ -21,6 +22,7 @@ if(isset($_POST['lago']) && $_POST['lago']!="" &&
     $promedio = $_POST['promedio'];
     $numero = $_POST['numero'];
     $precio = $_POST['precio'];
+    $animal = $_POST['animal'];
     $fecha = $_POST['fecha'];
 
     $tempUnidades = $unidades;
@@ -32,6 +34,7 @@ if(isset($_POST['lago']) && $_POST['lago']!="" &&
     $promedio = mysqli_real_escape_string($con,$promedio);
     $numero = mysqli_real_escape_string($con,$numero);
     $precio = mysqli_real_escape_string($con,$precio);
+    $animal = mysqli_real_escape_string($con,$animal);
     $fecha = mysqli_real_escape_string($con,$fecha);
 
 
@@ -56,7 +59,7 @@ if(isset($_POST['lago']) && $_POST['lago']!="" &&
 
 
     $labor = 'Sale de lago';
-    $sqlSalida = "SELECT *FROM salida WHERE lago='".$lago."' AND siembra='".$siembra."'";
+    $sqlSalida = "SELECT *FROM salida WHERE lago='".$lago."' AND siembra='".$siembra."' AND animal='".$animal."'";
     $querySalida = mysqli_query($con,$sqlSalida);
 
     foreach($querySalida as $rowSalida){}

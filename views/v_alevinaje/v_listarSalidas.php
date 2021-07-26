@@ -101,10 +101,16 @@ require('../../controllers/c_alevinaje/c_listarSalidas.php');
                          <td> <?php echo $row['animal'] ?> </td>
                          <td> <?php echo $row['promedioPeso'] ?> </td>
                          <td> <?php echo $row['fecha'] ?> </td>
-                         <td> <a href="./v_verDescripcion.php?codigo=<?php echo $row['codigo'] ?>">Ver descripción</a> </td>
+                         
+                         <td> 
+                           <a href="./v_verDescripcion.php?codigo=<?php echo $row['codigo'] ?>&animal=<?php echo $row['animal'] ?>">
+                             Ver descripción
+                           </a> 
+                         </td>
+                         
                          <td>
                             
-                              <a href="./v_editarSalida.php?codigo=<?php echo $row['codigo'] ?>">
+                              <a href="./v_editarSalida.php?codigo=<?php echo $row['codigo'] ?>&animal=<?php echo $row['animal'] ?>">
                                    <button class="btn btn-warning">
                                       <i class="far fa-edit"></i>  
                                    </button>
@@ -114,7 +120,7 @@ require('../../controllers/c_alevinaje/c_listarSalidas.php');
                                 if($varSesion['tipo']=='admin' || $varSesion['tipo']=='root'){
                              ?>
 
-                                 <a href="./v_eliminarSalida.php?codigo=<?php echo $row['codigo'] ?>">
+                                 <a href="./v_eliminarSalida.php?codigo=<?php echo $row['codigo'] ?>&animal=<?php echo $row['animal'] ?>">
                                     <button class="btn btn-danger" style="margin-top:5px; width:44px">
                                        <i class="far fa-trash-alt"></i>
                                     </button>

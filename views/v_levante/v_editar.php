@@ -85,13 +85,19 @@ require('../../models/m_general/m_listarSiembras.php');
                               <input type="number" step="any" name="precio" class="form-control" value="<?php echo $row['precio'] ?>" required>
                             </div>
 
+                            <div class="col">
+                                  <label>Animal</label>
+                                     <select class="form-control" name="animal" readonly>
+                                          <option> <?php echo $row['animal'] ?> </option>
+                                      </select>
+                            </div>
+
                            <div class="col">
                                 <label>Fecha</label>
                                 <input type="date" class="form-control" name="fecha" value="<?php echo $row['fecha'] ?>" required>
                             </div>
      
-                            <div class="col"></div>
-
+                            
                      </div>
 
                             <button class="btn btn-primary" style="margin-top:30px">Guardar cambios</button>

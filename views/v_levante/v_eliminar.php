@@ -83,13 +83,20 @@ require('../../models/m_general/m_listarSiembras.php');
                               <label>Precio kilo</label>
                               <input type="number" step="any" name="precio" class="form-control" value="<?php echo $row['precio'] ?>" readonly>
                             </div>
+                            
+                            <div class="col">
+                              <label>Animal</label>
+                              <select name="animal" class="form-control" readonly>
+                                 <option> <?php echo $row['animal'] ?> </option>
+                              </select>
+                            </div>
 
                            <div class="col">
                                 <label>Fecha</label>
                                 <input type="date" class="form-control" name="fecha" value="<?php echo $row['fecha'] ?>" readonly>
                             </div>
      
-                            <div class="col"></div>
+                           
 
                      </div>
 
@@ -103,7 +110,7 @@ require('../../models/m_general/m_listarSiembras.php');
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="history.go(-1)">Cancelar</button>
 
-        <a href="../../models/m_levante/m_eliminar.php?codigo=<?php echo $row['codigo'] ?>">
+        <a href="../../models/m_levante/m_eliminar.php?codigo=<?php echo $row['codigo'] ?>&animal=<?php echo $row['animal'] ?>">
          <button type="button" class="btn btn-success">Continuar</button>
         </a>
     </div>

@@ -150,13 +150,21 @@ require('../../models/m_general/m_listarSiembras.php');
                               <input type="number" step="any" name="precio" class="form-control">
                             </div>
 
+                            <div class="col">
+                                  <label>Animal</label>
+                                     <select class="form-control" name="animal" required>
+                                          <option></option>
+                                          <option>Cachama</option>
+                                          <option>Bocachico</option>
+                                      </select>
+                            </div>
+
                            <div class="col">
                                 <label>Fecha</label>
                                 <input type="date" class="form-control" name="fecha" required>
                             </div>
      
-                            <div class="col"></div>
-
+                          
                      </div>
 
                             <button class="btn btn-success" style="margin-top:30px">Guardar</button>

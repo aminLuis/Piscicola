@@ -1,6 +1,7 @@
 <?php
 require('../../models/m_usuario/m_sesion.php');
 $codigo = $_GET['codigo'];
+$animal = $_GET['animal'];
 require('../../controllers/c_alevinaje/c_cargarSalida.php');
 require('../../models/m_general/m_lagos.php');
 require('../../models/m_general/m_listarSiembras.php');
@@ -106,6 +107,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                         <tbody>
                          <?php
                             foreach($queryRegistro as $rwReg){
+                               if($rwReg['animal']==$animal){
                          ?>
                            <tr>
                                <td> <?php echo $rwReg['lago'] ?> </td>
@@ -117,6 +119,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                            </tr>
 
                         <?php
+                               }
                             }
                          ?>
 

@@ -1,6 +1,7 @@
 <?php
 require('../../models/m_usuario/m_sesion.php');
 $codigo = $_GET['codigo'];
+$animal = $_GET['animal'];
 require('../../controllers/c_alevinaje/c_cargarSalida.php');
 require('../../controllers/c_alevinaje/c_buscarRegistro.php');
 
@@ -154,6 +155,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                         <tbody>
                          <?php
                             foreach($queryRegistro as $rwReg){
+                              if($rwReg['animal']==$animal){
                          ?>
                            <tr>
                                <td> <?php echo $rwReg['lago'] ?> </td>
@@ -164,7 +166,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
 
                                <?php
                                 if($varSesion['tipo']=='admin' || $varSesion['tipo']=='root'){
-                             ?>
+                              ?>
 
                                  <a href="./v_eliminarRegistro.php?codigoInterno=<?php echo $rwReg['codigoInterno'] ?>">
                                        <button class="btn btn-danger">
@@ -180,6 +182,7 @@ require('../../controllers/c_alevinaje/c_buscarRegistro.php');
                            </tr>
 
                         <?php
+                              }
                             }
                          ?>
 
