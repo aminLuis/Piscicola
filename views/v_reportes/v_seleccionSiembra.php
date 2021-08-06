@@ -37,7 +37,7 @@ require('../../models/m_admin/m_vectorSiembras.php');
                         <?php
                         foreach($siembra as $rowSiembra){
                         ?>               
-                            <option value=""> <?php echo $rowSiembra ?> </option>
+                            <option> <?php echo $rowSiembra ?> </option>
                         <?php
                         }
                         ?>

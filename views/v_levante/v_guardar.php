@@ -196,11 +196,11 @@ require('../../models/m_general/m_listarSiembras.php');
                                    <td> <?php echo $row['codigo'] ?> </td>
                                    <td> <?php echo $row['lago'] ?> </td>
                                    <td> <?php echo $row['siembra'] ?> </td>
-                                   <td> <?php echo $row['unidades'] ?> </td>
-                                   <td> <?php echo $row['kilogramos'] ?> </td>
+                                   <td> <?php echo number_format($row['unidades'],1,",",".") ?> </td>
+                                   <td> <?php echo number_format($row['kilogramos'],1,",",".") ?> </td>
                                    <td> <?php echo $row['promedio'] ?> </td>
                                    <td> <?php echo $row['numero'] ?> </td>
-                                   <td> <?php echo $row['precio'] ?> </td>
+                                   <td> <?php echo number_format($row['precio'],1,",",".") ?> </td>
                                    <td> <?php echo $row['fecha'] ?> </td>
                                    <td>
 

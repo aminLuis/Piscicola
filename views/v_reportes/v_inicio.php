@@ -72,10 +72,13 @@ require('../../models/m_usuario/m_sesion.php');
             
                 <div class="col">
                   
-                     <a href="./v_SeleccionSiembra.php" class="text-primary stretched-link">
+                     <a href="./v_seleccionSiembra.php" class="text-primary stretched-link">
 
-                        <div class="alert alert-success">
+                        <div class="alert alert-info">
                         <h5>Reporte siembra</h5>
+                        <p>Alevinaje</p>
+                        <p>Levante y engorde</p>
+                        <p>Totales</p>
                         </div>
                   
                      </a>
@@ -84,9 +87,6 @@ require('../../models/m_usuario/m_sesion.php');
 
                 <div class="col">
                 
-                    <div class="alert alert-success">
-                        <h5>Reporte lago</h5>
-                    </div>
  
                 </div>
             

@@ -92,9 +92,9 @@ require('../../controllers/c_levante/c_utilidadLago.php');
                           <tr>
                              <td> <?php echo $lago ?> </td>
                              <td> <?php echo $siembra ?> </td>
-                             <td> <?php echo $costos ?> </td>
-                             <td> <?php echo $recaudo ?> </td>
-                             <td> <?php echo $utilidad ?> </td>
+                             <td> <?php echo number_format($costos,1,",",".") ?> </td>
+                             <td> <?php echo number_format($recaudo,1,",",".") ?> </td>
+                             <td> <?php echo number_format($utilidad,1,",",".") ?> </td>
                           </tr>
                       </tbody>
                    </table>

@@ -100,8 +100,8 @@ require('../../controllers/c_alevinaje/c_listarSalidas.php');
                            <td> <?php echo $row['lago'] ?> </td>
                            <td> <?php echo $row['siembra'] ?> </td>
                            <td> <?php echo $row['animal'] ?> </td>
-                           <td> <?php echo $row['cantidad'] ?> </td>
-                           <td> <?php echo $row['saldo'] ?> </td>
+                           <td> <?php echo number_format($row['cantidad'],1,",",".") ?> </td>
+                           <td> <?php echo number_format($row['saldo'],1,",",".") ?> </td>
                            <td> <?php echo $row['estado'] ?> </td>
                            <td>
                            
