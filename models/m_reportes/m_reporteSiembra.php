@@ -38,6 +38,7 @@ foreach($querySalida as $rowSalida){
 
 $totalConsumo = 0;
 $totalConsumo = $totalConsumoAlevinaje + $totalConsumoLevante;
+$totalKilosCarne = 0;
 
 $totalCostoSiembra = 0;
 foreach($queryCostosTotales as $rowCostoSiembra){
@@ -47,6 +48,7 @@ foreach($queryCostosTotales as $rowCostoSiembra){
 $totalRecaudoSiembra = 0;
 foreach($queryLevante as $rowLevante){
     $totalRecaudoSiembra = $totalRecaudoSiembra + ($rowLevante['kilogramos'] *$rowLevante['precio'] );
+    $totalKilosCarne = $totalKilosCarne + $rowLevante['kilogramos'];
 }
 
 $utilidadSiembra = 0;

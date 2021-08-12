@@ -289,11 +289,12 @@ require('../../controllers/c_reportes/c_reporteSiembra.php');
               <ul class="list-group">
                     
                     <li class="list-group-item list-group-item-info">
-                       <h5>Totales</h5>
-                       <h6>Total consumo alimento siembra: <?php echo number_format($totalConsumo,1,",",".") ?></h6>
-                       <h6>Total costo siembra: <?php echo number_format($totalCostoSiembra,1,",",".") ?></h6>
-                       <h6>Total recaudo siembra: <?php echo number_format($totalRecaudoSiembra,1,",",".") ?></h6>
-                       <h6>Utilidad siembra: <?php echo number_format($utilidadSiembra,1,",",".") ?></h6>
+                       <h5 class="text-success">Totales</h5>
+                       <h6 class="text-danger">Total consumo alimento siembra: <?php echo number_format($totalConsumo,1,",",".") ?></h6>
+                       <h6 class="text-danger">Total kilos producidos: <?php echo number_format($totalKilosCarne,1,",",".") ?></h6>
+                       <h6 class="text-danger">Total costo siembra: <?php echo number_format($totalCostoSiembra,1,",",".") ?></h6>
+                       <h6 class="text-danger">Total recaudo siembra: <?php echo number_format($totalRecaudoSiembra,1,",",".") ?></h6>
+                       <h6 class="text-danger">Utilidad siembra: <?php echo number_format($utilidadSiembra,1,",",".") ?></h6>
                     </li>
 
                 </ul>
