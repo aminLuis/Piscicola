@@ -188,11 +188,32 @@ require('../../controllers/c_reportes/c_reporteSiembra.php');
                                     <td> <?php echo $sobrevivencia ?> </td>
                                     <td> <?php echo $mortandad ?> </td>
                                     
+
+                                   <?php
+                                    if($rowSalida['animal']=='Cachama'){
+                                   ?>
+
                                     <td>
                                         <a href="./v_detalleConsumo.php?siembra=<?php echo $siembra?>&lago=<?php echo $rowSalida['lago'] ?>">
                                           <?php echo number_format($consumo,1,",",".") ?>
                                         </a> 
                                     </td>
+
+                                   <?php
+                                   }else{
+                                   ?>
+
+                                    <td>
+                                       
+                                          <?php echo 0?>
+                                         
+                                    </td>
+
+                                   <?php
+                                   }
+                                   ?>
+
+                                    
                                 
                                  </tr>
                                  <?php
